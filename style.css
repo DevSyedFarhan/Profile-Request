@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgb(0, 63, 252), rgb(0, 46, 185));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+    height: 120px;
+    width: 120px;
+    border-radius:50% ;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.card h1{
+    font-size: 28px;
+    border-bottom: 1px solid black;
+}
+.card h2{
+    font-size: 18px;
+    opacity: .6;
+    margin-bottom: 19px;
+    font-weight: 500;
+}
+.card p{
+    font-size: 12px;
+    opacity: .5;
+    margin-bottom: 40px;
+    
+}
+
+.card h5{
+    font-size: 18px;
+    opacity: .7;
+    margin-bottom: 5px;
+    
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+button {
+    font-weight: 600;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(18, 73, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+.remove{
+    padding: 8px 25px;
+    background-color: rgb(113, 113, 113);
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 720px) {
+    #main{
+        flex-direction: column;
+    }
+    .card {
+        width: 250px;
+        height: 400px; 
+        padding: 15px 30px;
+    }
+    .card img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .card h1{
+        font-size: 18px;
+    }
+    .card h2{
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+    .card p{
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+    .card h5{
+        font-size: 14px;
+    }
+    .card .add{
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    .card .remove{
+        padding: 6px 16px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1056px) {
+    button{
+        font-size: 12px;
+    }
+}
